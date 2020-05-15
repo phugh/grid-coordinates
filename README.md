@@ -11,6 +11,6 @@ console.log(coords); // [ 0, 2 ] i.e [ X, Y ]
 ```
 
 ## License
-(C) 2019 [P. Hughes](https://www.phugh.es). All rights reserved.
+(C) 2020 [P. Hughes](https://www.phugh.es). All rights reserved.
 
 Shared under the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-nc-sa/3.0/) license.
