@@ -1,13 +1,13 @@
 /**
  * grid-coordinates
- * v1.0.0
+ * v1.0.1
  *
  * Calculate X, Y coordinates from cell position and grid width.
  *
  * Help me make this better:
  * https://github.com/phugh/grid-coordinates
  *
- * (C) 2019 P. Hughes
+ * (C) 2020 P. Hughes
  * Licence : Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
  * http://creativecommons.org/licenses/by-nc-sa/3.0/
  *
@@ -18,32 +18,28 @@
  *
  * See README.md for help.
  *
- * @param  {Number} cell   current cell
- * @param  {Number} width  grid width
- * @return {Array} [X, Y];
+ * @param  {number} cell   current cell
+ * @param  {number} width  grid width
+ * @return {Array<number>} [X, Y];
  */
 
-(function() {
+// eslint-disable-next-line no-extra-semi
+;(() => {
   'use strict';
 
   /**
    * @function getCoords
-   * @param  {Number} cell   current cell
-   * @param  {Number} width  grid width
-   * @return {Array} [X, Y];
+   * @public
+   * @param  {number} cell current cell
+   * @param  {number} width grid width
+   * @return {Array<number>} [X, Y];
    */
-  const getCoords = (cell, width) => {
-    const X = cell % width;
-    const Y = Math.floor(cell / width);
-    return [X, Y]; // (col, row)
-  };
+  const getCoords = (cell, width) => [cell % width, Math.floor(cell / width)];
 
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
       exports = module.exports = getCoords;
     }
     exports.getCoords = getCoords;
-  } else {
-    global.getCoords = getCoords;
   }
 })();
