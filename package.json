@@ -1,6 +1,6 @@
 {
   "name": "grid-coordinates",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Calculate X, Y coordinates from cell position and grid width.",
   "main": "index.js",
   "repository": {
